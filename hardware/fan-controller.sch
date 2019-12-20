@@ -1,0 +1,384 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "ATtiny13A PWM Fan Controller"
+Date "2019-12-20"
+Rev "1"
+Comp "D Cooper Dalrymple"
+Comment1 "https://github.com/dcooperdalrymple/fan-controller"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L fan-controller:L4931-5.0 U1
+U 1 1 5DFD92E3
+P 2800 3450
+F 0 "U1" H 2800 3692 50  0000 C CNN
+F 1 "L4931-5.0" H 2800 3601 50  0000 C CNN
+F 2 "" H 2800 3450 50  0001 C CNN
+F 3 "" H 2800 3450 50  0001 C CNN
+	1    2800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 5DFDA558
+P 1350 3450
+F 0 "J1" H 1268 3675 50  0000 C CNN
+F 1 "Screw Terminal" H 1268 3676 50  0001 C CNN
+F 2 "" H 1350 3450 50  0001 C CNN
+F 3 "~" H 1350 3450 50  0001 C CNN
+	1    1350 3450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Motor:Fan_3pin M?
+U 1 1 5DFDB8C9
+P 8800 3450
+F 0 "M?" H 8958 3446 50  0000 L CNN
+F 1 "Fan_3pin" H 8958 3355 50  0000 L CNN
+F 2 "" H 8800 3360 50  0001 C CNN
+F 3 "http://www.hardwarecanucks.com/forum/attachments/new-builds/16287d1330775095-help-chassis-power-fan-connectors-motherboard-asus_p8z68.jpg" H 8800 3360 50  0001 C CNN
+	1    8800 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_US RV1
+U 1 1 5DFDC441
+P 8200 4150
+F 0 "RV1" H 8132 4196 50  0000 R CNN
+F 1 "10k" H 8132 4105 50  0000 R CNN
+F 2 "" H 8200 4150 50  0001 C CNN
+F 3 "~" H 8200 4150 50  0001 C CNN
+	1    8200 4150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5DFDCCCF
+P 7900 3450
+F 0 "R1" V 8105 3450 50  0000 C CNN
+F 1 "1k" V 8014 3450 50  0000 C CNN
+F 2 "" V 7940 3440 50  0001 C CNN
+F 3 "~" H 7900 3450 50  0001 C CNN
+	1    7900 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5DFDD767
+P 2350 3800
+F 0 "C1" H 2468 3846 50  0000 L CNN
+F 1 "10uF" H 2468 3755 50  0000 L CNN
+F 2 "" H 2388 3650 50  0001 C CNN
+F 3 "~" H 2350 3800 50  0001 C CNN
+	1    2350 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5DFDDADD
+P 3250 3800
+F 0 "C2" H 3368 3846 50  0000 L CNN
+F 1 "10uF" H 3368 3755 50  0000 L CNN
+F 2 "" H 3288 3650 50  0001 C CNN
+F 3 "~" H 3250 3800 50  0001 C CNN
+	1    3250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 5DFDDF84
+P 4850 4100
+F 0 "C3" H 4968 4146 50  0000 L CNN
+F 1 "22uF" H 4968 4055 50  0000 L CNN
+F 2 "" H 4888 3950 50  0001 C CNN
+F 3 "~" H 4850 4100 50  0001 C CNN
+	1    4850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5DFDE5CB
+P 5350 4100
+F 0 "C4" H 5465 4146 50  0000 L CNN
+F 1 "0.1uF" H 5465 4055 50  0000 L CNN
+F 2 "" H 5388 3950 50  0001 C CNN
+F 3 "~" H 5350 4100 50  0001 C CNN
+	1    5350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5DFDECFD
+P 2050 3100
+F 0 "#PWR?" H 2050 2950 50  0001 C CNN
+F 1 "+12V" H 2065 3273 50  0000 C CNN
+F 2 "" H 2050 3100 50  0001 C CNN
+F 3 "" H 2050 3100 50  0001 C CNN
+	1    2050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DFDF441
+P 3550 3100
+F 0 "#PWR?" H 3550 2950 50  0001 C CNN
+F 1 "+5V" H 3565 3273 50  0000 C CNN
+F 2 "" H 3550 3100 50  0001 C CNN
+F 3 "" H 3550 3100 50  0001 C CNN
+	1    3550 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DFDFC8E
+P 2050 4150
+F 0 "#PWR?" H 2050 3900 50  0001 C CNN
+F 1 "GND" H 2055 3977 50  0000 C CNN
+F 2 "" H 2050 4150 50  0001 C CNN
+F 3 "" H 2050 4150 50  0001 C CNN
+	1    2050 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3450 2050 3450
+Wire Wire Line
+	1550 3550 2050 3550
+Connection ~ 2050 4050
+Wire Wire Line
+	2050 4050 2050 4150
+Wire Wire Line
+	2050 3450 2050 3100
+Connection ~ 2050 3450
+Wire Wire Line
+	2050 3450 2350 3450
+Wire Wire Line
+	2050 3550 2050 4050
+Wire Wire Line
+	3100 3450 3250 3450
+Wire Wire Line
+	3250 3450 3250 3650
+Wire Wire Line
+	3250 3950 3250 4050
+Wire Wire Line
+	2050 4050 2350 4050
+Wire Wire Line
+	2800 3750 2800 4050
+Connection ~ 2800 4050
+Wire Wire Line
+	2800 4050 3250 4050
+Wire Wire Line
+	2350 3450 2350 3650
+Connection ~ 2350 3450
+Wire Wire Line
+	2350 3450 2500 3450
+Wire Wire Line
+	2350 3950 2350 4050
+Connection ~ 2350 4050
+Wire Wire Line
+	2350 4050 2800 4050
+Wire Wire Line
+	3550 3100 3550 3450
+Wire Wire Line
+	3550 3450 3250 3450
+Connection ~ 3250 3450
+$Comp
+L power:+5V #PWR?
+U 1 1 5DFEAAD1
+P 1700 3350
+F 0 "#PWR?" H 1700 3200 50  0001 C CNN
+F 1 "+5V" V 1715 3478 50  0000 L CNN
+F 2 "" H 1700 3350 50  0001 C CNN
+F 3 "" H 1700 3350 50  0001 C CNN
+	1    1700 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 3350 1550 3350
+$Comp
+L power:+5V #PWR?
+U 1 1 5DFEE14D
+P 6750 2850
+F 0 "#PWR?" H 6750 2700 50  0001 C CNN
+F 1 "+5V" H 6765 3023 50  0000 C CNN
+F 2 "" H 6750 2850 50  0001 C CNN
+F 3 "" H 6750 2850 50  0001 C CNN
+	1    6750 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DFEE8BD
+P 6750 4550
+F 0 "#PWR?" H 6750 4300 50  0001 C CNN
+F 1 "GND" H 6755 4377 50  0000 C CNN
+F 2 "" H 6750 4550 50  0001 C CNN
+F 3 "" H 6750 4550 50  0001 C CNN
+	1    6750 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4250 5350 4350
+Wire Wire Line
+	4850 4250 4850 4350
+$Comp
+L power:+5V #PWR?
+U 1 1 5DFF2D01
+P 5100 3700
+F 0 "#PWR?" H 5100 3550 50  0001 C CNN
+F 1 "+5V" H 5115 3873 50  0000 C CNN
+F 2 "" H 5100 3700 50  0001 C CNN
+F 3 "" H 5100 3700 50  0001 C CNN
+	1    5100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3700 5100 3850
+Wire Wire Line
+	5350 3850 5350 3950
+Wire Wire Line
+	4850 3850 4850 3950
+Wire Wire Line
+	6750 4250 6750 4550
+Wire Wire Line
+	4850 4350 5100 4350
+Connection ~ 5100 3850
+Wire Wire Line
+	5100 3850 5350 3850
+Wire Wire Line
+	4850 3850 5100 3850
+$Comp
+L power:GND #PWR?
+U 1 1 5DFFA21D
+P 5100 4550
+F 0 "#PWR?" H 5100 4300 50  0001 C CNN
+F 1 "GND" H 5105 4377 50  0000 C CNN
+F 2 "" H 5100 4550 50  0001 C CNN
+F 3 "" H 5100 4550 50  0001 C CNN
+	1    5100 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4550 5100 4350
+Connection ~ 5100 4350
+Wire Wire Line
+	5100 4350 5350 4350
+Wire Wire Line
+	8050 3450 8500 3450
+Wire Wire Line
+	7750 3450 7350 3450
+$Comp
+L power:GND #PWR?
+U 1 1 5E00239E
+P 8200 4500
+F 0 "#PWR?" H 8200 4250 50  0001 C CNN
+F 1 "GND" H 8205 4327 50  0000 C CNN
+F 2 "" H 8200 4500 50  0001 C CNN
+F 3 "" H 8200 4500 50  0001 C CNN
+	1    8200 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4150 8050 4150
+$Comp
+L power:+5V #PWR?
+U 1 1 5E00568A
+P 8200 3800
+F 0 "#PWR?" H 8200 3650 50  0001 C CNN
+F 1 "+5V" H 8215 3973 50  0000 C CNN
+F 2 "" H 8200 3800 50  0001 C CNN
+F 3 "" H 8200 3800 50  0001 C CNN
+	1    8200 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3550 7900 4150
+Wire Wire Line
+	8200 4300 8200 4400
+Wire Wire Line
+	8200 3800 8200 3900
+Wire Wire Line
+	7350 3550 7900 3550
+Connection ~ 7900 4150
+Wire Wire Line
+	6750 3050 6750 2850
+$Comp
+L Connector:Screw_Terminal_01x03 J2
+U 1 1 5DFD9DA1
+P 7500 4150
+F 0 "J2" H 7418 4375 50  0000 C CNN
+F 1 "Screw Terminal" H 7418 4376 50  0001 C CNN
+F 2 "" H 7500 4150 50  0001 C CNN
+F 3 "~" H 7500 4150 50  0001 C CNN
+	1    7500 4150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_ATtiny:ATtiny13A-PU U2
+U 1 1 5DFCE29E
+P 6750 3650
+F 0 "U2" H 6221 3696 50  0000 R CNN
+F 1 "ATtiny13A-PU" H 6221 3605 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6750 3650 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf" H 6750 3650 50  0001 C CNN
+	1    6750 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 4150 7900 4150
+Wire Wire Line
+	7700 4050 7800 4050
+Wire Wire Line
+	7800 4050 7800 3900
+Wire Wire Line
+	7800 3900 8200 3900
+Connection ~ 8200 3900
+Wire Wire Line
+	8200 3900 8200 4000
+Wire Wire Line
+	7700 4250 7800 4250
+Wire Wire Line
+	7800 4250 7800 4400
+Wire Wire Line
+	7800 4400 8200 4400
+Connection ~ 8200 4400
+Wire Wire Line
+	8200 4400 8200 4500
+$Comp
+L power:+12V #PWR?
+U 1 1 5E017987
+P 8800 3050
+F 0 "#PWR?" H 8800 2900 50  0001 C CNN
+F 1 "+12V" H 8815 3223 50  0000 C CNN
+F 2 "" H 8800 3050 50  0001 C CNN
+F 3 "" H 8800 3050 50  0001 C CNN
+	1    8800 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3050 8800 3250
+$Comp
+L power:GND #PWR?
+U 1 1 5E019014
+P 8800 3950
+F 0 "#PWR?" H 8800 3700 50  0001 C CNN
+F 1 "GND" H 8805 3777 50  0000 C CNN
+F 2 "" H 8800 3950 50  0001 C CNN
+F 3 "" H 8800 3950 50  0001 C CNN
+	1    8800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3750 8800 3950
+Text Notes 1300 2500 0    100  ~ 20
+Power Regulation
+Text Notes 5100 2500 0    100  ~ 20
+MCU Fan Controller
+Text Notes 4800 3350 0    50   ~ 10
+MCU Decoupling
+$EndSCHEMATC
