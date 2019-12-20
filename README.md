@@ -1,5 +1,5 @@
 # ATtiny13A PWM Fan Controller
-Have an old piece of gear with a noisy VAC fan? This simple project might just work for you. Using a tiny 8-pin microcontroller, you can control the PWM duty cycle of a 3-pin CPU case fan and alter its RPM using a simple potentiometer.
+Have an old piece of gear with a noisy VAC fan? This simple project might just work for you. Using a tiny 8-pin microcontroller, you can control the PWM duty cycle of a 4-pin CPU fan or the voltage of a 3-pin case fan and alter its RPM using a simple potentiometer.
 
 ![Fan Controller Schematic](img/schematic.png)
 
